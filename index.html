@@ -46,6 +46,7 @@
         <a href="javascript:void(0)" onClick="{{ scrollToWork }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Case Studies</a>
         <a href="javascript:void(0)" onClick="{{ scrollToAbout }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">About</a>
         <a href="javascript:void(0)" onClick="{{ scrollToSpeaking }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Speaking</a>
+        <a href="javascript:void(0)" onClick="{{ scrollToPodcasts }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Podcasts</a>
         <a href="javascript:void(0)" onClick="{{ scrollToPublications }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Publications</a>
         <sc-if value="{{ showStickyCta }}" hint-placeholder-val="{{ true }}">
           <a href="mailto:abhishek.jain520@gmail.com" style="{{ ctaStyle }}" style-hover="{{ ctaHoverStyle }}">Get in touch</a>
@@ -321,6 +322,28 @@
     </div>
   </section>
 
+  <section id="podcasts" style="padding:80px 0;">
+    <div class="container" style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">PODCAST APPEARANCE</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:clamp(24px,4.2vw,30px); margin-top:10px;">In conversation</h2>
+      </div>
+      <div class="grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div>
+          <a href="https://www.youtube.com/watch?v=AifFR-nCTl8" target="_blank" rel="noopener" style="position:relative; display:block; width:100%; aspect-ratio:16/9; border:1px solid #DEDED6;">
+            <img src="uploads/Screenshot 2026-09-08 at 2.30.52 AM.png" alt="Why UX Communities Matter — with Abhishek Jain, Experience Haus" style="width:100%; height:100%; object-fit:cover; display:block;">
+            <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;"><div style="width:56px; height:56px; border-radius:50%; background:rgba(0,0,0,0.55); display:flex; align-items:center; justify-content:center;"><div style="width:0; height:0; border-top:10px solid transparent; border-bottom:10px solid transparent; border-left:16px solid #fff; margin-left:3px;"></div></div></div>
+          </a>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F; margin-top:10px;">Watch on YouTube</div>
+        </div>
+        <div>
+          <iframe src="https://embed.podcasts.apple.com/in/podcast/episode-013-why-ux-communities-matter-with-abhishek-jain/id1805339123?i=1000702845011" style="width:100%; height:175px; border:1px solid #DEDED6; border-radius:0;" allow="autoplay *; encrypted-media *;"></iframe>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F; margin-top:10px;">Episode 013 — "Why UX Communities Matter," on Apple Podcasts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="recognition" style="padding:80px 0; background:#F1F1EC; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6;">
     <div class="container" style="max-width:1080px; margin:0 auto; padding:0 32px;">
       <div style="max-width:620px; margin-bottom:44px;">
@@ -393,6 +416,7 @@ class Component extends DCLogic {
     const scrollToWork = scrollTo('work');
     const scrollToAbout = scrollTo('about');
     const scrollToSpeaking = scrollTo('speaking');
+    const scrollToPodcasts = scrollTo('podcasts');
     const scrollToPublications = scrollTo('publications');
     const scrollToContact = () => { window.location.href = 'mailto:abhishek.jain520@gmail.com'; };
 
@@ -413,7 +437,7 @@ class Component extends DCLogic {
       ? { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '24px', alignItems: 'flex-start', borderLeft: 'none', borderTop: '1px solid #DEDED6', paddingTop: '20px', paddingLeft: 0 }
       : { display: 'flex', flexDirection: 'column', gap: '18px', justifyContent: 'center', borderLeft: '1px solid #DEDED6', paddingLeft: '32px' };
 
-    return { scrollToTop, scrollToWork, scrollToAbout, scrollToSpeaking, scrollToPublications, scrollToContact, ctaStyle, ctaHoverStyle, caseMetricsStyle, showStickyCta };
+    return { scrollToTop, scrollToWork, scrollToAbout, scrollToSpeaking, scrollToPodcasts, scrollToPublications, scrollToContact, ctaStyle, ctaHoverStyle, caseMetricsStyle, showStickyCta };
   }
 }
 
