@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Jain — Staff UX Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF8;
+    --panel:#F1F1EC;
+    --line:#DEDED6;
+    --ink:#15171B;
+    --ink-soft:#54585F;
+    --teal:#0E7C86;
+    --navy:#152238;
+    --navy-soft:#B9C3D4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 32px;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  /* ---- nav ---- */
+  header{
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  nav.wrap{display:flex; justify-content:space-between; align-items:center;}
+  .logo{font-family:'Newsreader', serif; font-size:20px; font-weight:500;}
+  .navlinks{display:flex; gap:32px; font-size:14.5px; color:var(--ink-soft);}
+  .navlinks a:hover{color:var(--ink);}
+
+  /* ---- hero ---- */
+  .hero{padding:88px 0 64px;}
+  .hero .top{display:grid; grid-template-columns:1fr 220px; gap:48px; align-items:start;}
+  .hero .photo{
+    width:220px; aspect-ratio:4/5; object-fit:cover;
+    border:1px solid var(--line); background:var(--panel);
+  }
+  .hero .photo-cap{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--ink-soft); margin-top:8px;}
+  .hero h1{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:45px;
+    line-height:1.18;
+    max-width:760px;
+    letter-spacing:-0.01em;
+  }
+  .hero p.lede{
+    max-width:640px;
+    font-size:17.5px;
+    color:var(--ink-soft);
+    margin-top:22px;
+  }
+  .hero .role{
+    margin-top:28px;
+    font-size:14.5px;
+    color:var(--teal);
+  }
+  .hero .role .sep{color:var(--line); margin:0 8px;}
+
+  /* ---- stat readout ---- */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    margin-top:56px;
+  }
+  .stat{
+    padding:26px 24px;
+    border-right:1px solid var(--line);
+  }
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'IBM Plex Mono', monospace; font-size:26px; color:var(--navy);}
+  .stat .label{font-size:13px; color:var(--ink-soft); margin-top:6px;}
+
+  /* ---- section shell ---- */
+  section{padding:80px 0;}
+  section.tinted{background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .section-head{max-width:620px; margin-bottom:44px;}
+  .kicker{font-size:13px; color:var(--teal); font-family:'IBM Plex Mono', monospace;}
+  .section-head h2{
+    font-family:'Newsreader', serif;
+    font-weight:500;
+    font-size:30px;
+    margin-top:10px;
+  }
+  .section-head p{color:var(--ink-soft); margin-top:12px; font-size:15.5px;}
+
+  /* ---- positioning ---- */
+  .positioning{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;}
+  .positioning p{font-size:16px; color:var(--ink-soft); margin-bottom:16px;}
+  .positioning p strong{color:var(--ink); font-weight:500;}
+  .side-fact{border-left:2px solid var(--teal); padding-left:18px; margin-bottom:22px;}
+  .side-fact .num{font-family:'IBM Plex Mono', monospace; font-size:22px; color:var(--navy);}
+  .side-fact .label{font-size:14px; color:var(--ink-soft); margin-top:4px;}
+
+  /* ---- case studies ---- */
+  .cases{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line);}
+  .case{background:var(--paper); padding:36px; display:grid; grid-template-columns:1.6fr 1fr; gap:40px;}
+  .case-thumb{
+    width:100%; aspect-ratio:16/9; object-fit:cover;
+    border:1px solid var(--line); background:var(--panel); margin-bottom:18px;
+  }
+  .case-thumb.placeholder{
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--ink-soft);
+  }
+  .case-index{font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--teal); margin-bottom:10px;}
+  .case h3{font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin-bottom:14px;}
+  .case .block{margin-bottom:14px;}
+  .case .block .h{font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink-soft); margin-bottom:4px;}
+  .case .block p{font-size:14.5px; color:var(--ink-soft);}
+  .case-metrics{display:flex; flex-direction:column; gap:18px; justify-content:center; border-left:1px solid var(--line); padding-left:32px;}
+  .case-metrics .metric .num{font-family:'IBM Plex Mono', monospace; font-size:24px; color:var(--navy);}
+  .case-metrics .metric .label{font-size:13px; color:var(--ink-soft); margin-top:3px;}
+
+  /* ---- infrastructure proof ---- */
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .proof-card{background:var(--paper); border:1px solid var(--line); padding:26px;}
+  .proof-card .num{font-family:'IBM Plex Mono', monospace; font-size:26px; color:var(--teal);}
+  .proof-card h4{font-size:15px; font-weight:600; margin-top:10px;}
+  .proof-card p{font-size:14px; color:var(--ink-soft); margin-top:6px;}
+  .proof-quote{
+    margin-top:36px; font-family:'Newsreader', serif; font-style:italic; font-size:19px;
+    color:var(--navy); max-width:640px;
+  }
+
+  /* ---- testimonials ---- */
+  .testimonials{display:grid; grid-template-columns:1fr 1fr; gap:36px;}
+  .testimonial{background:var(--paper); border:1px solid var(--line); padding:30px;}
+  .testimonial p.quote{font-size:15.5px; color:var(--ink); margin-bottom:18px;}
+  .testimonial .who{font-size:13.5px; color:var(--ink-soft);}
+  .testimonial .who strong{color:var(--ink); font-weight:500;}
+
+  /* ---- recognition ---- */
+  .recognition-list{display:flex; flex-direction:column;}
+  .rec-row{
+    display:grid; grid-template-columns:120px 1fr 200px; gap:24px;
+    padding:16px 0; border-bottom:1px solid var(--line); align-items:baseline;
+  }
+  .rec-row:first-child{border-top:1px solid var(--line);}
+  .rec-row .year{font-family:'IBM Plex Mono', monospace; font-size:13px; color:var(--teal);}
+  .rec-row .desc{font-size:14.5px;}
+  .rec-row .badge{font-size:13px; color:var(--ink-soft); text-align:right;}
+
+  /* ---- contact / footer ---- */
+  footer{background:var(--navy); color:var(--navy-soft); padding:64px 0 36px;}
+  footer h2{font-family:'Newsreader', serif; color:#fff; font-size:30px; font-weight:500; max-width:480px;}
+  .contact-links{display:flex; gap:36px; margin-top:28px; flex-wrap:wrap;}
+  .contact-links a{font-size:14.5px; color:var(--navy-soft); border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;}
+  .contact-links a:hover{color:#fff; border-color:#fff;}
+  .foot-note{margin-top:56px; font-size:12.5px; color:rgba(185,195,212,0.6);}
+
+  /* ---- annotation callouts (prototype only) ---- */
+  .note{
+    background:#FFF7E8; border:1px solid #E9D6A6; color:#6B4E12;
+    font-size:12.5px; padding:8px 12px; margin-top:10px; max-width:520px;
+  }
+
+  @media (max-width: 860px){
+    .hero .top{grid-template-columns:1fr; }
+    .hero .photo{width:140px;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .stat:nth-child(2){border-right:none;}
+    .positioning{grid-template-columns:1fr;}
+    .case{grid-template-columns:1fr;}
+    .case-metrics{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:20px;}
+    .proof-grid{grid-template-columns:1fr;}
+    .testimonials{grid-template-columns:1fr;}
+    .rec-row{grid-template-columns:1fr; gap:4px;}
+    .rec-row .badge{text-align:left;}
+    .hero h1{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">Abhishek Jain</div>
+    <div class="navlinks">
+      <a data-scroll="work" href="javascript:void(0)">Work</a>
+      <a data-scroll="about" href="javascript:void(0)">About</a>
+      <a data-scroll="speaking" href="javascript:void(0)">Speaking</a>
+      <a data-scroll="contact" href="javascript:void(0)">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>I find where AI creates real leverage for enterprise operators — then stay in the room until it ships.</h1>
+        <p class="lede">Staff UX Researcher (IC6) at Meta, embedded in Enterprise Products. I run mixed-methods research across supply chain, infrastructure, and logistics, and I build the tooling — dashboards, pipelines, code — that makes the research scale, not just the write-up.</p>
+        <div class="role">Meta (Facebook) <span class="sep">·</span> ex-ServiceNow, KPIT, TCS <span class="sep">·</span> London, UK</div>
+      </div>
+      <div>
+        <img class="photo" src="https://lh7-us.googleusercontent.com/sitesv-images-rt/ACHe0d00f-onOYZ_6Ht-3VBW1lErcJG4Ak39I35SpPJCJWavZErs9yupkyhqt-8cuW6C5YSr8p4OhiDlOCpdZrHQmqfkY0T-aZmO46n_f9kVbvdrt8w_2okadYCQ5aUb7j_raiAZSeAX_XQCklyeERa6nIFJl_bC8IEzHjlIbSdGy5OaWBfdEL-OIkwPLaHk0KuptHkq8kT0ZXAadQu3D4idshZP7wSTaplstvEqJ0as1Ak=w440" alt="Abhishek Jain">
+        <div class="photo-cap">Abhishek Jain — London, UK</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">14+</div><div class="label">Years in UX research</div></div>
+      <div class="stat"><div class="num">$35M+</div><div class="label">Verified business impact</div></div>
+      <div class="stat"><div class="num">35+</div><div class="label">Production code changes shipped</div></div>
+      <div class="stat"><div class="num">8</div><div class="label">Peer-reviewed publications</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="positioning">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">POSITIONING</div>
+      <h2>Researcher by title, builder by practice</h2>
+    </div>
+    <div class="positioning">
+      <div>
+        <p>My work sits at the intersection of what operators actually need and what AI can actually deliver. I find the leverage points, validate them with the people doing the work, and don't hand the insight off at the readout — I stay through concept validation, model evaluation, and production.</p>
+        <p>That full loop — discovery to shipped product — is where the <strong>$35M+ in documented business impact</strong> came from. It's also why I don't just run studies: I've personally shipped 35+ production code changes (87,000+ lines) live in enterprise applications, with zero engineering dependency, because waiting for eng bandwidth was slower than building the measurement myself.</p>
+        <p>Outside Meta, I founded <strong>UXness</strong>, a UX community that's grown to 45,000+ practitioners, and I've published 8 peer-reviewed papers at HCII and related conferences since 2016.</p>
+      </div>
+      <div>
+        <div class="side-fact">
+          <div class="num">15+</div>
+          <div class="label">apps with sentiment infrastructure I built solo, zero eng dependency — since scaled to 20+ across the org</div>
+        </div>
+        <div class="side-fact">
+          <div class="num">30+</div>
+          <div class="label">persona catalog mapped across the Supply Chain org — leadership's roadmapping source of truth</div>
+        </div>
+        <div class="side-fact">
+          <div class="num">3</div>
+          <div class="label">Senior UXRs formally mentored at Meta; built the Meta-wide AI4Research learning series</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">ABOUT</div>
+      <h2>The long version</h2>
+    </div>
+    <div class="positioning">
+      <div>
+        <p>I started in UX at TCS in Mumbai and Pune, spending four years in Banking & Finance research for the likes of RBC, Barclays, HSBC, and the World Bank. At KPIT I became the first professional UXR embedded in the org — building a research culture from zero, against leadership resistance, running ethnographic fieldwork across Detroit, Germany, Malaysia, and India.</p>
+        <p>At ServiceNow, as the first UXR for their India development center, I owned the Workforce Optimization suite and drove a 25% UX quality improvement across two major releases. I've been at Meta since May 2022, now as Staff UXR (IC6) in London, the sole researcher across a 52-product, 8-team Supply Chain org.</p>
+        <p>14+ years in. Still mostly interested in the same question: where is the gap between what a system assumes and what a person actually needs — and can I close it myself instead of waiting for someone else to.</p>
+      </div>
+      <div>
+        <div class="side-fact">
+          <div class="num">2012</div>
+          <div class="label">Started in UX at TCS, Mumbai/Pune — Banking & Finance research</div>
+        </div>
+        <div class="side-fact">
+          <div class="num">2018</div>
+          <div class="label">First professional UXR at KPIT — built research culture from zero</div>
+        </div>
+        <div class="side-fact">
+          <div class="num">2022</div>
+          <div class="label">Joined Meta, London — Staff UXR, Enterprise Supply Chain</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:36px; font-size:14.5px; color:var(--ink-soft); max-width:640px;">Outside of work: traveller, backpacker, and father — I write about independent travel at <a href="https://backpackness.in" style="color:var(--teal); border-bottom:1px solid var(--teal);">backpackness.in</a>.</p>
+  </div>
+</section>
+
+<section id="speaking">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">SPEAKING</div>
+      <h2>On stage and in the community</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:start;">
+      <div>
+        <img src="speaking-ee-summit.jpeg" alt="Presenting at EE Summit 2024" style="width:100%; border:1px solid var(--line); object-fit:cover; aspect-ratio:3/2;">
+        <div class="photo-cap" style="margin-top:10px;">"Build with Precision" — EE Summit 2024, Meta London. UX research studies with Ray-Ban Meta Glasses across data center field visits, in-office experience capture, and warehouse fieldwork.</div>
+      </div>
+      <div class="recognition-list" style="border:none;">
+        <div class="rec-row" style="grid-template-columns:110px 1fr;"><div class="year mono">2024</div><div class="desc">"Build with Precision" — EE Summit, Meta London</div></div>
+        <div class="rec-row" style="grid-template-columns:110px 1fr;"><div class="year mono">2019</div><div class="desc">CTI Munich</div></div>
+        <div class="rec-row" style="grid-template-columns:110px 1fr;"><div class="year mono">2016</div><div class="desc">HCI London</div></div>
+        <div class="rec-row" style="grid-template-columns:110px 1fr;"><div class="year mono">—</div><div class="desc">ProductWorld — 8,000+ attendees</div></div>
+        <div class="rec-row" style="grid-template-columns:110px 1fr;"><div class="year mono">—</div><div class="desc">ProductCamp Poland, and design meetups</div></div>
+        <div class="rec-row" style="grid-template-columns:110px 1fr; border-bottom:none;"><div class="year mono">2025</div><div class="desc">Podcast guest — "A Conversation About Design," ep. 013</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tinted" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">CASE STUDIES</div>
+      <h2>Recent research, with the numbers it produced</h2>
+      <p>Three projects that moved from field research to shipped product.</p>
+    </div>
+
+    <div class="cases">
+      <div class="case">
+        <div>
+          <img class="case-thumb" src="https://lh3.googleusercontent.com/sitesv/AG8ngQWHbtc_1x0iBYGXeSDAT8KaAew_pCmlVgqbXaTanqXL1Z72DrLs5hvs8UNh1j3sp_X9sQuFGx5bHJ_PRfZgzs2P8NZMnGlpNGuQjl9up_9ij7uvVnn690LDsu4irk9_6eH5KAeqKVe5lM2OLLOC_G33b3PABA1T6oWOWHFuYmJ8ZO7nbBdTjSc-r7gTXZU=w640" alt="Inventory Logistics AI Discovery">
+          <div class="case-index">01 · Inventory Logistics AI Discovery</div>
+          <h3>Two tools, one workflow, and a quiet operational cost</h3>
+          <div class="block"><div class="h">Problem</div><p>A cluster of users kept switching between two tools to complete one manual workflow. We needed to quantify what that was actually costing and find where AI could realistically remove the friction.</p></div>
+          <div class="block"><div class="h">Approach</div><p>Explanatory sequential mixed methods: quant behavior analysis, contextual interviews, job shadowing, a co-creation workshop, and AI evals against a golden dataset built with expert users.</p></div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="num">$4.7–5.8M</div><div class="label">Annualized savings</div></div>
+          <div class="metric"><div class="num">8,700+</div><div class="label">Hours/month of manual work eliminated</div></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <img class="case-thumb" src="https://lh3.googleusercontent.com/sitesv/AG8ngQUSvDTiDfwWvL_07tRiInP93676LdQ4M2qIbzMAyWCfbhulijbMI0my5hhlmPHa3F1I2PVb64i2lNxkcGXXmxHF4QDcsssOzT15rY6xpR3OzbOK-U8tnFBwD6lJEC7vrnHNtOSvwERYxmz3qKdJTse-JBGIKSrpHDqUFlCniBJbl2R8oTtaHpvVbj6OI40=w640" alt="Scaling a Listening System">
+          <div class="case-index">02 · Scaling a Listening System</div>
+          <h3>From one product's snapshot to an org-wide trend line</h3>
+          <div class="block"><div class="h">Problem</div><p>No continuous way to measure product sentiment across 50+ products — only one product had in-app CSAT. Everyone else relied on periodic studies that gave snapshots, not trends.</p></div>
+          <div class="block"><div class="h">Approach</div><p>Self-built and shipped an end-to-end CSAT pipeline, scaling from 1 to 20+ apps org-wide — 15+ of them built and integrated solo, with no engineering dependency. Paired quant tracking with qualitative depth, and built the real-time dashboard leadership now uses as its source of truth.</p></div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="num">140K+</div><div class="label">Survey impressions per year</div></div>
+          <div class="metric"><div class="num">1 → 20+</div><div class="label">Apps scaled org-wide</div></div>
+        </div>
+      </div>
+
+      <div class="case">
+        <div>
+          <div class="case-thumb placeholder">No thumbnail on the live site yet — add one</div>
+          <div class="case-index">03 · Infra Data Center AI Troubleshooting Agent</div>
+          <h3>Turning 19-hour diagnoses into a 4-minute answer</h3>
+          <div class="block"><div class="h">Problem</div><p>DC technicians relied on manual, fragmented troubleshooting across AI servers — slow diagnosis, inconsistent resolution paths, and a growing backlog of undiagnosed tickets.</p></div>
+          <div class="block"><div class="h">Approach</div><p>Led end-to-end research strategy and vision using exploratory mixed methods — IDIs, job shadowing, field visits, concept testing — plus human-as-judge AI evals to validate model output.</p></div>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="num">19hrs → 4min</div><div class="label">Mean time to diagnose</div></div>
+          <div class="metric"><div class="num">57.7%</div><div class="label">Previously-undiagnosed tickets now resolved</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">INFRASTRUCTURE</div>
+      <h2>Not just running research — building the systems that make it scale</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="num">30+</div>
+        <h4>Persona catalog</h4>
+        <p>50+ personas mapped across the Supply Chain org into a single catalog — leadership's source of truth for roadmapping.</p>
+      </div>
+      <div class="proof-card">
+        <div class="num">5+ yrs</div>
+        <h4>Research repository</h4>
+        <p>Years of insights consolidated into one searchable system, plus an org-wide AI skill built on top of it for early signal.</p>
+      </div>
+      <div class="proof-card">
+        <div class="num">43K+</div>
+        <h4>Hours saved per quarter</h4>
+        <p>Co-architected a Llama-powered thematic analysis tool processing 10M+ survey responses a year.</p>
+      </div>
+    </div>
+    <p class="proof-quote">"Closing the gap between finding the insight and shipping the fix became the actual methodology."</p>
+  </div>
+</section>
+
+<section class="tinted">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">WHAT PARTNERS SAY</div>
+      <h2>From the people I've shipped this work with</h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p class="quote">"Abhishek identified we had no scalable way to measure product sentiment. Rather than wait for engineering bandwidth, he personally built and deployed in-app CSAT surveys across 15+ enterprise applications, writing and shipping the production code himself."</p>
+        <div class="who"><strong>Clea Karlstrom</strong> — Director of UX Research, Meta</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">"He's not a conventional UX researcher — he's a product leader who sees beyond the problem at hand and constructs novel methods to drive data-driven decisions. He's become a sought-after collaborator with the influence to drive product pivots and secure engineering investment."</p>
+        <div class="who"><strong>Mina Derian</strong> — Product Design Manager, Meta</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recognition">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">RECOGNITION</div>
+      <h2>Awards and hackathons</h2>
+      <div class="note">Prototype note: pick one consistent hackathon story. I've used the deck's version (named projects + named badges) since it's more concrete than a percentile claim — confirm before publishing.</div>
+    </div>
+    <div class="recognition-list">
+      <div class="rec-row"><div class="year mono">2024</div><div class="desc">Ray-Ban Meta as a microphone for content creation — Summer Hackathon</div><div class="badge">Mic Drop Award</div></div>
+      <div class="rec-row"><div class="year mono">2025</div><div class="desc">AR/AI recognition for logistics receiving — Summer Hackathon</div><div class="badge">Hackathon win + C-suite demo</div></div>
+      <div class="rec-row"><div class="year mono">2025</div><div class="desc">Open-ended analysis tool with ML-assisted evaluation and LLMs — Fall Global Hackathon</div><div class="badge">AI Research Innovation Award, VP of UXR</div></div>
+      <div class="rec-row"><div class="year mono">2016–21</div><div class="desc">8 peer-reviewed papers at HCII and related conferences</div><div class="badge">→ Full list</div></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p style="max-width:480px; margin-top:14px; font-size:15px; color:var(--navy-soft);">Based in London. Open to conversations about Staff/Principal UXR roles, speaking, and AI-native research practice.</p>
+    <div class="contact-links">
+      <a href="mailto:abhishek.jain520@gmail.com">abhishek.jain520@gmail.com</a>
+      <a href="https://linkedin.com/in/abhishekjain520">LinkedIn</a>
+      <a href="https://scholar.google.co.in/citations?user=GxI-neMAAAAJ">Google Scholar</a>
+      <a href="https://uxness.in">UXness</a>
+      <a href="https://backpackness.in">Backpackness</a>
+    </div>
+    <div class="foot-note">© 2026 Abhishek Jain — prototype layout for review, not the live site.</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-scroll]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      var target = document.getElementById(el.getAttribute('data-scroll'));
+      if(target){ target.scrollIntoView({behavior:'smooth', block:'start'}); }
+    });
+  });
+</script>
+</body>
+</html>

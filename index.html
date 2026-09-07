@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Abhishek Jain — Staff UX Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0; -webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;}
+</style>
+</helmet>
+
+<div style="background:#FAFAF8; color:#15171B; font-family:'IBM Plex Sans', sans-serif; line-height:1.55;">
+
+  <header style="position:sticky; top:0; z-index:50; background:rgba(250,250,248,0.92); backdrop-filter:blur(6px); border-bottom:1px solid #DEDED6;">
+    <nav style="max-width:1080px; margin:0 auto; padding:18px 32px; display:flex; justify-content:space-between; align-items:center;">
+      <a href="javascript:void(0)" onClick="{{ scrollToTop }}" style="font-family:'Newsreader', serif; font-size:19px; font-weight:500; color:#15171B;">Abhishek Jain</a>
+      <div style="display:flex; gap:28px; align-items:center; font-size:14.5px; color:#54585F;">
+        <a href="javascript:void(0)" onClick="{{ scrollToWork }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Case Studies</a>
+        <a href="javascript:void(0)" onClick="{{ scrollToAbout }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">About</a>
+        <a href="javascript:void(0)" onClick="{{ scrollToSpeaking }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Speaking</a>
+        <a href="javascript:void(0)" onClick="{{ scrollToPublications }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}">Publications</a>
+        <sc-if value="{{ showStickyCta }}" hint-placeholder-val="{{ true }}">
+          <a href="mailto:abhishek.jain520@gmail.com" style="{{ ctaStyle }}" style-hover="{{ ctaHoverStyle }}">Get in touch</a>
+        </sc-if>
+      </div>
+    </nav>
+  </header>
+
+  <section style="padding:88px 0 64px;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="display:grid; grid-template-columns:1fr 320px; gap:48px; align-items:start;">
+        <div>
+          <h1 style="font-family:'Newsreader', serif; font-weight:500; font-size:45px; line-height:1.18; max-width:760px; letter-spacing:-0.01em; margin:0;">Keeping users first — turning ambiguous problems into research my partners can act on.</h1>
+          <p style="max-width:640px; font-size:17.5px; color:#54585F; margin-top:22px;">Staff UX Researcher (IC6) at Meta, embedded in Enterprise Products. I run mixed-methods research across supply chain, infrastructure, and logistics, and I build the tooling — dashboards, pipelines, code — that makes the research scale, not just the write-up.</p>
+          <div style="margin-top:28px; font-size:14.5px; color:#0E7C86;">Meta (Facebook) <span style="color: rgb(222, 222, 214); margin: 0px 8px;">·</span>ex-ServiceNow&nbsp;<span style="color: rgb(222, 222, 214); margin: 0px 8px;">·</span>London, UK</div>
+        </div>
+        <div>
+          <img src="./whatsapp-image-2026-09-07-at-9-48-31-am-mtqqe9zy-cynm.jpeg" alt="Abhishek Jain" style="width:320px; aspect-ratio:4/5; object-fit:cover; object-position:top; border:1px solid #DEDED6; background:#F1F1EC; display:block;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F; margin-top:8px;">Abhishek Jain — London, UK</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6; margin-top:56px;">
+        <div style="padding:26px 24px; border-right:1px solid #DEDED6;"><div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#152238;">14+</div><div style="font-size:13px; color:#54585F; margin-top:6px;">Years in UX research</div></div>
+        <div style="padding:26px 24px; border-right:1px solid #DEDED6;"><div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#152238;">$35M+</div><div style="font-size:13px; color:#54585F; margin-top:6px;">Verified business impact</div></div>
+        <div style="padding:26px 24px; border-right:1px solid #DEDED6;"><div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#152238;">35+</div><div style="font-size:13px; color:#54585F; margin-top:6px;">Production code changes shipped</div></div>
+        <div style="padding:26px 24px;"><div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#152238;">8</div><div style="font-size:13px; color:#54585F; margin-top:6px;">Peer-reviewed publications</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="positioning" style="padding:80px 0;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">POSITIONING</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">UX Researcher by title, AI builder by practice</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;">
+        <div>
+          <p style="font-size:16px; color:#54585F; margin-bottom:16px;">My work sits at the intersection of what operators actually need and what AI can actually deliver. I find the leverage points, validate them with the people doing the work, and don't hand the insight off at the readout — I stay through concept validation, model evaluation, and production.</p>
+          <p style="font-size:16px; color:#54585F; margin-bottom:16px;">That full loop — discovery to shipped product — is where the <strong style="color:#15171B; font-weight:500;">$35M+ in documented business impact</strong> came from. It's also why I don't just run studies: I've personally shipped 35+ production code changes (87,000+ lines) live in enterprise applications, with zero engineering dependency, because waiting for eng bandwidth was slower than building the measurement myself.</p>
+          <p style="font-size:16px; color:#54585F; margin-bottom:0;">Outside Meta, I founded <strong style="color:#15171B; font-weight:500;">UXness</strong>, a UX community that's grown to 45,000+ practitioners, and I've published 8 peer-reviewed papers at HCII and related conferences since 2016.</p>
+        </div>
+        <div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">15+</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">apps with sentiment infrastructure I built solo, zero eng dependency — since scaled to 20+ across the org</div>
+          </div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">30+</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">persona catalog mapped across the Supply Chain org — leadership's roadmapping source of truth</div>
+          </div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:0;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">3</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">Senior UXRs formally mentored at Meta; built the Meta-wide AI4Research learning series</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" style="padding:80px 0; background:#F1F1EC; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">ABOUT</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">The long version</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;">
+        <div>
+          <p style="font-size:16px; color:#54585F; margin-bottom:16px;">I started in UX at TCS in Mumbai and Pune, spending four years in Banking &amp; Finance research for the likes of RBC, Barclays, HSBC, and the World Bank. At KPIT I became the first professional UXR embedded in the org — building a research culture from zero, against leadership resistance, running ethnographic fieldwork across Detroit, Germany, Malaysia, and India.</p>
+          <p style="font-size:16px; color:#54585F; margin-bottom:16px;">At ServiceNow (2020–2022), as the first UXR for their India development center, I owned the Workforce Optimization suite and drove a 25% UX quality improvement across two major releases. I've been at Meta since May 2022, now as Staff UXR (IC6) in London, the sole researcher across a 52-product, 8-team Supply Chain org.</p>
+          <p style="font-size:16px; color:#54585F; margin-bottom:0;">14+ years in. Still mostly interested in the same question: where is the gap between what a system assumes and what a person actually needs — and can I close it myself instead of waiting for someone else to.</p>
+        </div>
+        <div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">2022</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">Joined Meta, London — Staff UXR, Enterprise Supply Chain</div>
+          </div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">2020</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">First UXR for ServiceNow's India dev center — owned Workforce Optimization suite</div>
+          </div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:22px;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">2018</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">First professional UXR at KPIT — built research culture from zero</div>
+          </div>
+          <div style="border-left:2px solid #0E7C86; padding-left:18px; margin-bottom:0;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; color:#152238;">2012</div>
+            <div style="font-size:14px; color:#54585F; margin-top:4px;">Started in UX at TCS, Mumbai/Pune — Banking &amp; Finance research</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top:44px;">
+        <div style="font-size:13px; color:#54585F; font-family:'IBM Plex Mono', monospace; margin-bottom:14px;">SKILLS</div>
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:10px;">AI-Native Research</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">AI Opportunity Discovery</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">AI Concept Testing</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">AI Model Evaluation (Evals)</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">AI-Native Prototyping</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">JTBD Workflow Analysis</span>
+          </div>
+        </div>
+        <div style="margin-bottom:18px;">
+          <div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:10px;">Qualitative Methods</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">User Interviews</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Ethnographic Studies</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Contextual Inquiry</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Usability Testing</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Heuristic Evaluation</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Affinity Mapping</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Journey Mapping</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Participatory Design</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:10px;">Quantitative Methods</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">A/B Testing</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Survey Design</span>
+            <span style="background:#FAFAF8; border:1px solid #DEDED6; padding:6px 12px; font-size:13.5px;">Inferential Statistics (T-Tests, Chi-Square)</span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:36px; font-size:14.5px; color:#54585F; max-width:640px;"><a href="https://docs.google.com/document/d/1k3nDqbfLHna8ZEL6iqLy5aYXH8Q05BIhTd-Qt2VZduI/edit?usp=sharing" style="position: relative; font-size: 16px">Download my CV</a></p><div style="font-size: 16px; line-height: 1; font-family: 'IBM Plex Sans', sans-serif; position: absolute; left: 73px; top: 13px"><a href="https://docs.google.com/document/d/1k3nDqbfLHna8ZEL6iqLy5aYXH8Q05BIhTd-Qt2VZduI/edit?usp=sharing" style="position: relative">Your text here</a></div><p></p>
+    </div>
+  </section>
+
+  <section id="work" style="padding:80px 0;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">RESEARCH CASE STUDIES</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">Recent research, with the impact it produced</h2>
+        <p style="color:#54585F; margin-top:12px; font-size:15.5px;">Three projects that moved from field research to shipped product.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1px; background:#DEDED6; border:1px solid #DEDED6;">
+
+        <div style="background:#FAFAF8; padding:36px; display:grid; grid-template-columns:1.6fr 1fr; gap:40px; border-left:3px solid transparent; transition:background 0.2s ease, border-color 0.2s ease;" style-hover="{{ {background:'#F1F1EC', borderLeftColor:'#0E7C86'} }}">
+          <div>
+            <img src="./screenshot-2026-09-03-at-7-41-52-pm-mtqo4vgx-pe3b.png" alt="Inventory Logistics AI Discovery" style="width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid #DEDED6; background:#F1F1EC; margin-bottom:18px; display:block;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; margin-bottom:10px;">01 · Inventory Logistics AI Discovery</div>
+            <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Three tools, one workflow, and a quiet operational cost</h3>
+            <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">A cluster of users kept switching between two tools to complete one manual workflow. We needed to quantify what that was actually costing and find where AI could realistically remove the friction.</p></div>
+            <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Explanatory sequential mixed methods: quant behavior analysis, contextual interviews, job shadowing, a co-creation workshop, and AI evals against a golden dataset built with expert users.</p></div>
+            <a href="#" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}">Explore the work →</a>
+          </div>
+          <div style="{{ caseMetricsStyle }}">
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">$4.7–5.8M</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Annualized savings</div></div>
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">8,700+</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Hours/month of manual work eliminated</div></div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAF8; padding:36px; display:grid; grid-template-columns:1.6fr 1fr; gap:40px; border-left:3px solid transparent; transition:background 0.2s ease, border-color 0.2s ease;" style-hover="{{ {background:'#F1F1EC', borderLeftColor:'#0E7C86'} }}">
+          <div>
+            <img src="./screenshot-2026-09-07-at-8-47-38-am-mtqo7bzs-m5uv.png" alt="Scaling a Listening System" style="width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid #DEDED6; background:#F1F1EC; margin-bottom:18px; display:block;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; margin-bottom:10px;">02 · Scaling a Listening System</div>
+            <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">From one product's snapshot to an org-wide trend line</h3>
+            <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">No continuous way to measure product sentiment across 50+ products — only one product had in-app CSAT. Everyone else relied on periodic studies that gave snapshots, not trends.</p></div>
+            <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Self-built and shipped an end-to-end CSAT pipeline, scaling from 1 to 20+ apps org-wide — 15+ of them built and integrated solo, with no engineering dependency. Paired quant tracking with qualitative depth, and built the real-time dashboard leadership now uses as its source of truth.</p></div>
+            <a href="#" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}">Explore the work →</a>
+          </div>
+          <div style="{{ caseMetricsStyle }}">
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">140K+</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Survey impressions per year</div></div>
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">1 → 20+</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Apps scaled org-wide</div></div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAF8; padding:36px; display:grid; grid-template-columns:1.6fr 1fr; gap:40px; border-left:3px solid transparent; transition:background 0.2s ease, border-color 0.2s ease;" style-hover="{{ {background:'#F1F1EC', borderLeftColor:'#0E7C86'} }}">
+          <div>
+            <img src="./screenshot-2026-09-07-at-8-46-54-am-mtqo6ecp-cfdf.png" alt="Infra Data Center AI Troubleshooting Agent" style="width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid #DEDED6; background:#F1F1EC; margin-bottom:18px; display:block;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; margin-bottom:10px;">03 · Infra Data Center AI Troubleshooting Agent</div>
+            <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Turning 19-hour diagnoses into a 4-minute answer</h3>
+            <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">DC technicians relied on manual, fragmented troubleshooting across AI servers — slow diagnosis, inconsistent resolution paths, and a growing backlog of undiagnosed tickets.</p></div>
+            <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Led end-to-end research strategy and vision using exploratory mixed methods — IDIs, job shadowing, field visits, concept testing — plus human-as-judge AI evals to validate model output.</p></div>
+            <a href="#" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #585858; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}">Explore the work → (Link TBD)</a>
+          </div>
+          <div style="{{ caseMetricsStyle }}">
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">19hrs → 4min</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Mean time to diagnose</div></div>
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">0 → ~60%</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Previously-undiagnosed tickets now resolved</div></div>
+          </div>
+        </div>
+
+        <div style="background:#FAFAF8; padding:36px; display:grid; grid-template-columns:1.6fr 1fr; gap:40px; border-left:3px solid transparent; transition:background 0.2s ease, border-color 0.2s ease;" style-hover="{{ {background:'#F1F1EC', borderLeftColor:'#0E7C86'} }}">
+          <div>
+            <img src="images/thumb-wfo-uxq.png" alt="Workforce Optimization — UXQ Improvement" style="width:100%; aspect-ratio:16/9; object-fit:cover; border:1px solid #DEDED6; background:#F1F1EC; margin-bottom:18px; display:block;">
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; margin-bottom:10px;">04 · Workforce Optimization (WFO) — UXQ Improvement</div>
+            <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Building the first UX quality baseline for a hard-to-reach B2B persona</h3>
+            <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">As first UXR for ServiceNow's India IDC, owned the Manager Workspace within WFO — a tool for managers/supervisors driving team scheduling, performance visibility, and skills growth — with no established baseline to track UX quality across releases or against competitors.</p></div>
+            <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Designed and ran the release-over-release UXQ baseline program: 60-min remote usability testing with 15 customer support managers (US, Europe, APAC) against the USE framework (Effective, Efficient, Empowering), recruited via a third-party agency to reach this hard-to-access B2B persona.</p></div>
+            <a href="https://docs.google.com/presentation/d/1BgvmrWgSY-0HWxZ4mFfofjfQ0qjhWhCZUBX3oHMuY7I/edit?usp=sharing" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3C7075; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}">Explore the work →</a>
+          </div>
+          <div style="{{ caseMetricsStyle }}">
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">Baseline</div><div style="font-size:13px; color:#54585F; margin-top:3px;">Repeatable UXQ benchmarking process, now used for progress tracking and competitive comparison</div></div>
+            <div><div style="font-family:'IBM Plex Mono', monospace; font-size:24px; color:#152238;">25%</div><div style="font-size:13px; color:#54585F; margin-top:3px;">UXQ score improvement, Quebec to Rome release</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:80px 0;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">RESEARCH INFRASTRUCTURE</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">Not just running research — building the systems that make it scale</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:28px;">
+        <div style="background:#FAFAF8; border:1px solid #DEDED6; padding:26px;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#0E7C86;">30+</div>
+          <h4 style="font-size:15px; font-weight:600; margin:10px 0 0 0;">Persona catalog</h4>
+          <p style="font-size:14px; color:#54585F; margin-top:6px;">50+ personas mapped across the Supply Chain org into a single catalog — leadership's source of truth for roadmapping.</p>
+        </div>
+        <div style="background:#FAFAF8; border:1px solid #DEDED6; padding:26px;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#0E7C86;">250+</div>
+          <h4 style="font-size:15px; font-weight:600; margin:10px 0 0 0;">Research repository artifacts</h4>
+          <p style="font-size:14px; color:#54585F; margin-top:6px;">5 Years of insights consolidated into one searchable system, plus an org-wide AI skill built on top of it for early signal.</p>
+        </div>
+        <div style="background:#FAFAF8; border:1px solid #DEDED6; padding:26px;">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:26px; color:#0E7C86;">43K+</div>
+          <h4 style="font-size:15px; font-weight:600; margin:10px 0 0 0;">Hours saved per quarter</h4>
+          <p style="font-size:14px; color:#54585F; margin-top:6px;">Co-architected a Llama-powered thematic analysis tool processing 10M+ survey responses a year.</p>
+        </div>
+      </div>
+      <p style="margin-top:36px; font-family:'Newsreader', serif; font-style:italic; font-size:19px; color:#152238; max-width:640px;">"Closing the gap between finding the insight and shipping the fix became the actual methodology."</p>
+    </div>
+  </section>
+
+  <section style="padding:80px 0; background:#F1F1EC; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">WHAT PARTNERS SAY</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">From the people I've shipped this work with</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px;">
+        <div style="background:#FAFAF8; border:1px solid #DEDED6; padding:30px;">
+          <p style="font-size:15.5px; color:#15171B; margin:0 0 18px 0;">"Abhishek identified we had no scalable way to measure product sentiment. Rather than wait for engineering bandwidth, he personally built and deployed in-app CSAT surveys across 15+ enterprise applications, writing and shipping the production code himself."</p>
+          <div style="font-size:13.5px; color:#54585F;"><strong style="color:#15171B; font-weight:500;">Clea Karlstrom</strong> — Director of UX Research, Meta</div>
+        </div>
+        <div style="background:#FAFAF8; border:1px solid #DEDED6; padding:30px;">
+          <p style="font-size:15.5px; color:#15171B; margin:0 0 18px 0;">"He's not a conventional UX researcher — he's a product leader who sees beyond the problem at hand and constructs novel methods to drive data-driven decisions. He's become a sought-after collaborator with the influence to drive product pivots and secure engineering investment."</p>
+          <div style="font-size:13.5px; color:#54585F;"><strong style="color:#15171B; font-weight:500;">Mina Derian</strong> — Product Design Manager, Meta</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="speaking" style="padding:80px 0;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">CONFERENCES SPEAKING</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">On stage and in the community</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:start;">
+        <div>
+          <img src="images/speaking-ee-summit.jpg" alt="Presenting at EE Summit 2024" style="width:100%; border:1px solid #DEDED6; object-fit:cover; aspect-ratio:3/2; display:block;">
+
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F; margin-top:10px;">"Build with Precision" — EE Summit 2024, Meta London. UX research studies with Ray-Ban Meta Glasses across data center field visits, in-office experience capture, and warehouse fieldwork.</div>
+        </div>
+        <div style="display:flex; flex-direction:column;">
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">Podcast guest — "A Conversation About Design," ep. 013 ( Spotify, Apply Podcasts)</div></div>
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2024</div><div style="font-size:14.5px;">"Build with Precision" — EE Summit, Meta London</div></div>
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2022</div><div style="font-size:14.5px;">ProductCamp Poland</div></div>
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2021</div><div style="font-size:14.5px;">ProductWorld — 8,000+ attendees (Virtual)</div></div>
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2019</div><div style="font-size:14.5px;">CTI Automotive Munich</div></div>
+          <div style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2016</div><div style="font-size:14.5px;">HCI International&nbsp; London</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recognition" style="padding:80px 0; background:#F1F1EC; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">RECOGNITION</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">Awards and hackathons</h2>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <div style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">Open-ended analysis tool with ML-assisted evaluation and LLMs — Fall Global Hackathon</div><div style="font-size:13px; color:#54585F; text-align:right;">AI Research Innovation Award, VP of UXR</div></div>
+        <div style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">AR/AI recognition for logistics receiving — Summer Hackathon</div><div style="font-size:13px; color:#54585F; text-align:right;">Hackathon win + C-suite demo</div></div>
+        <div style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2024</div><div style="font-size:14.5px;">Ray-Ban Meta as a microphone for content creation — Summer Hackathon</div><div style="font-size:13px; color:#54585F; text-align:right;">Mic Drop Award</div></div>
+        <div style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2016–21</div><div style="font-size:14.5px;">8 peer-reviewed papers at HCII and related conferences</div><div style="font-size:13px; color:#54585F; text-align:right;">→ Full list</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications" style="padding: 80px 0; position: relative">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">RESEARCH PUBLICATIONS</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:30px; margin-top:10px;">Published research papers</h2>
+      </div>
+      <div style="display:flex; flex-direction:column;">
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Feelbot: Reducing Use of Bad Words in Children through Wearable using Artificial Intelligence and Gamification</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">Interaction Design &amp; Children 2017</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Impact of the COVID-19 pandemic on user experience (UX) research</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">HCI International 2021</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Identification of Living Human Objects from Collapsed Architecture Debris to Improve the Disaster Rescue Operations Using IoT and Augmented Reality</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">HCII 2019, Orlando, FL, USA</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">A Study to Understand Behavioral Influencers Related to Carpooling in India</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">HCI International 2020</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Analysis and Optimization of Cash Withdrawal Process through ATM in India from HCI and Customization</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">ICTIS 2020</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Reduction of Servicing and Maintenance Time of Car — A Future Need</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">HMI 2016</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Improve Onboarding Customer Experience and Reduce Airline Ground Staff Efforts Using Wearable</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">HCI International 2018, Las Vegas, US</div></div>
+        <div style="display:grid; grid-template-columns:1fr 260px; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-size:14.5px;">Study of Icons in Enterprise Application Software Context</div><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#54585F; text-align:right;">Intl. Journal of Computer &amp; Information Eng.</div></div>
+      </div>
+    </div>
+  <div style="font-size: 16px; line-height: 1; font-family: 'IBM Plex Sans', sans-serif; position: absolute; left: 62px; top: 745px"><a href="https://scholar.google.co.in/citations?user=GxI-neMAAAAJ&amp;hl=en">Explore Google Scholar</a></div></section>
+
+  <footer id="contact" style="background:#152238; color:#B9C3D4; padding:64px 0 36px;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <h2 style="font-family:'Newsreader', serif; color:#fff; font-size:30px; font-weight:500; max-width:480px; margin:0;">Let's talk.</h2>
+      <p style="max-width:480px; margin-top:14px; font-size:15px; color:#B9C3D4;">Based in London. Open to conversations about Staff/Principal UXR roles, speaking, and AI-native research practice.</p>
+      <div style="display:flex; gap:36px; margin-top:28px; flex-wrap:wrap;">
+        <a href="mailto:abhishek.jain520@gmail.com" style="font-size:14.5px; color:#B9C3D4; border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;" style-hover="{{ {color:'#ffffff', borderColor:'#ffffff'} }}">abhishek.jain520@gmail.com</a>
+        <a href="https://linkedin.com/in/abhishekjain520" style="font-size:14.5px; color:#B9C3D4; border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;" style-hover="{{ {color:'#ffffff', borderColor:'#ffffff'} }}">LinkedIn</a>
+        <a href="https://scholar.google.co.in/citations?user=GxI-neMAAAAJ" style="font-size:14.5px; color:#B9C3D4; border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;" style-hover="{{ {color:'#ffffff', borderColor:'#ffffff'} }}">Google Scholar</a>
+        <a href="https://uxness.in" style="font-size:14.5px; color:#B9C3D4; border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;" style-hover="{{ {color:'#ffffff', borderColor:'#ffffff'} }}">UXness</a>
+        <a href="https://backpackness.in" style="font-size:14.5px; color:#B9C3D4; border-bottom:1px solid rgba(185,195,212,0.35); padding-bottom:2px;" style-hover="{{ {color:'#ffffff', borderColor:'#ffffff'} }}">Backpackness</a>
+      </div>
+      <div style="margin-top:56px; font-size:12.5px; color:rgba(185,195,212,0.6);">© 2026 Abhishek Jain</div>
+    </div>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: {},
+  &quot;accentColor&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#15171B&quot;, &quot;options&quot;: [&quot;#15171B&quot;, &quot;#BE7125&quot;, &quot;#C16048&quot;, &quot;#A97E2C&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Style&quot;},
+  &quot;showStickyCta&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;},
+  &quot;compactCaseMetrics&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accentColor ?? '#15171B';
+    const showStickyCta = this.props.showStickyCta ?? true;
+    const compactMetrics = this.props.compactCaseMetrics ?? false;
+
+    const scrollTo = (id) => () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    const scrollToWork = scrollTo('work');
+    const scrollToAbout = scrollTo('about');
+    const scrollToSpeaking = scrollTo('speaking');
+    const scrollToPublications = scrollTo('publications');
+    const scrollToContact = () => { window.location.href = 'mailto:abhishek.jain520@gmail.com'; };
+
+    const ctaStyle = {
+      background: accent,
+      color: '#FAFAF8',
+      fontSize: '13.5px',
+      fontFamily: "'IBM Plex Mono', monospace",
+      padding: '9px 16px',
+      border: '1px solid ' + accent,
+      letterSpacing: '0.01em',
+      whiteSpace: 'nowrap',
+      display: 'inline-block',
+    };
+    const ctaHoverStyle = { filter: 'brightness(0.92)' };
+
+    const caseMetricsStyle = compactMetrics
+      ? { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '24px', alignItems: 'flex-start', borderLeft: 'none', borderTop: '1px solid #DEDED6', paddingTop: '20px', paddingLeft: 0 }
+      : { display: 'flex', flexDirection: 'column', gap: '18px', justifyContent: 'center', borderLeft: '1px solid #DEDED6', paddingLeft: '32px' };
+
+    return { scrollToTop, scrollToWork, scrollToAbout, scrollToSpeaking, scrollToPublications, scrollToContact, ctaStyle, ctaHoverStyle, caseMetricsStyle, showStickyCta };
+  }
+}
+
+</script>
+</body>
+</html>
