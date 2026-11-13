@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="001d0d75-bf06-4055-8cf1-695dd67309e0" data-domains="www.designabhi.com,designabhi.com"></script>
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="/images/favicon.png">
 </head>
 <body>
 <x-dc>
@@ -17,6 +18,10 @@
   *{box-sizing:border-box;}
   body{margin:0; -webkit-font-smoothing:antialiased;}
   a{text-decoration:none;}
+  .talk-link{color:inherit; text-decoration:underline; text-decoration-color:#DEDED6; text-underline-offset:3px; transition:color 0.15s ease, text-decoration-color 0.15s ease;}
+  .talk-link:hover{color:#0E7C86; text-decoration-color:#0E7C86;}
+  .inline-icon{display:inline-block; width:1.35em; height:0.9em; vertical-align:-0.08em; border-radius:2px; box-shadow:0 0 0 1px rgba(21,23,27,0.12); margin-left:2px;}
+  .inline-icon[aria-hidden="true"]{width:1em; height:1em; vertical-align:-0.15em; box-shadow:none; margin:0 1px 0 0;}
   @media (max-width:900px){
     .container{padding:0 20px !important;}
     section{padding:56px 0 !important;}
@@ -49,6 +54,7 @@
         <a href="javascript:void(0)" onClick="{{ scrollToAbout }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}" data-umami-event="nav-click" data-umami-event-item="About">About</a>
         <a href="javascript:void(0)" onClick="{{ scrollToSpeaking }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}" data-umami-event="nav-click" data-umami-event-item="Speaking">Speaking</a>
         <a href="javascript:void(0)" onClick="{{ scrollToPodcasts }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}" data-umami-event="nav-click" data-umami-event-item="Podcasts">Podcasts</a>
+        <a href="javascript:void(0)" onClick="{{ scrollToMentorship }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}" data-umami-event="nav-click" data-umami-event-item="Mentorship">Mentorship</a>
         <a href="javascript:void(0)" onClick="{{ scrollToPublications }}" style="color:#54585F;" style-hover="{{ {color:'#15171B'} }}" data-umami-event="nav-click" data-umami-event-item="Publications">Publications</a>
         <sc-if value="{{ showStickyCta }}" hint-placeholder-val="{{ true }}">
           <a href="mailto:abhishek.jain520@gmail.com" style="{{ ctaStyle }}" style-hover="{{ ctaHoverStyle }}" data-umami-event="get-in-touch-click">Get in touch</a>
@@ -197,7 +203,7 @@
             <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Three tools, one workflow, and a quiet operational cost</h3>
             <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">A cluster of users kept switching between two tools to complete one manual workflow. We needed to quantify what that was actually costing and find where AI could realistically remove the friction.</p></div>
             <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Explanatory sequential mixed methods: quant behavior analysis, contextual interviews, job shadowing, a co-creation workshop, and AI evals against a golden dataset built with expert users.</p></div>
-            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Three%20tools%2C%20one%20workflow%2C%20and%20a%20quiet%20operational%20cost&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Three%20tools%2C%20one%20workflow%2C%20and%20a%20quiet%20operational%20cost.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="Inventory AI">Request the full case study →</a>
+            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Three%20tools%2C%20one%20workflow%2C%20and%20a%20quiet%20operational%20cost&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Three%20tools%2C%20one%20workflow%2C%20and%20a%20quiet%20operational%20cost.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="Inventory AI" data-case-label="01. Inventory Logistics AI Discovery">Request the full case study →</a>
             <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F;">Shared on request — contains confidential work.</div>
           </div>
           <div class="case-metrics" style="{{ caseMetricsStyle }}">
@@ -213,7 +219,7 @@
             <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">From one product's snapshot to an org-wide trend line</h3>
             <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">No continuous way to measure product sentiment across 50+ products — only one product had in-app CSAT. Everyone else relied on periodic studies that gave snapshots, not trends.</p></div>
             <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Self-built and shipped an end-to-end CSAT pipeline, scaling from 1 to 20+ apps org-wide — 15+ of them built and integrated solo, with no engineering dependency. Paired quant tracking with qualitative depth, and built the real-time dashboard leadership now uses as its source of truth.</p></div>
-            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20From%20one%20product%27s%20snapshot%20to%20an%20org-wide%20trend%20line&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20From%20one%20product%27s%20snapshot%20to%20an%20org-wide%20trend%20line.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="Listening System">Request the full case study →</a>
+            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20From%20one%20product%27s%20snapshot%20to%20an%20org-wide%20trend%20line&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20From%20one%20product%27s%20snapshot%20to%20an%20org-wide%20trend%20line.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display:inline-flex; align-items:center; gap:6px; margin-top:20px; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86; border:1px solid transparent; border-radius:2px; padding:8px 14px; margin-left:-15px; transition:border-color 0.15s ease, background 0.15s ease;" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="Listening System" data-case-label="02. Scaling a Listening System">Request the full case study →</a>
             <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F;">Shared on request — contains confidential work.</div>
           </div>
           <div class="case-metrics" style="{{ caseMetricsStyle }}">
@@ -229,7 +235,7 @@
             <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Turning 19-hour diagnoses into a 4-minute answer</h3>
             <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">DC technicians relied on manual, fragmented troubleshooting across AI servers — slow diagnosis, inconsistent resolution paths, and a growing backlog of undiagnosed tickets.</p></div>
             <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Led end-to-end research strategy and vision using exploratory mixed methods — IDIs, job shadowing, field visits, concept testing — plus human-as-judge AI evals to validate model output.</p></div>
-            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Turning%2019-hour%20diagnoses%20into%20a%204-minute%20answer&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Turning%2019-hour%20diagnoses%20into%20a%204-minute%20answer.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #0E7C86; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="DC Troubleshooting">Request the full case study →</a>
+            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Turning%2019-hour%20diagnoses%20into%20a%204-minute%20answer&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Turning%2019-hour%20diagnoses%20into%20a%204-minute%20answer.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #0E7C86; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="DC Troubleshooting" data-case-label="03. Infra Data Center AI Troubleshooting Agent">Request the full case study →</a>
             <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F;">Shared on request — contains confidential work.</div>
           </div>
           <div class="case-metrics" style="{{ caseMetricsStyle }}">
@@ -245,7 +251,7 @@
             <h3 style="font-family:'Newsreader', serif; font-size:22px; font-weight:500; margin:0 0 14px 0;">Building the first UX quality baseline for a hard-to-reach B2B persona</h3>
             <div style="margin-bottom:14px;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Problem</div><p style="font-size:14.5px; color:#54585F; margin:0;">As first UXR for ServiceNow's India IDC, owned the Manager Workspace within WFO — a tool for managers/supervisors driving team scheduling, performance visibility, and skills growth — with no established baseline to track UX quality across releases or against competitors.</p></div>
             <div style="margin-bottom:0;"><div style="font-size:12.5px; text-transform:uppercase; letter-spacing:0.04em; color:#54585F; margin-bottom:4px;">Approach</div><p style="font-size:14.5px; color:#54585F; margin:0;">Designed and ran the release-over-release UXQ baseline program: 60-min remote usability testing with 15 customer support managers (US, Europe, APAC) against the USE framework (Effective, Efficient, Empowering), recruited via a third-party agency to reach this hard-to-access B2B persona.</p></div>
-            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Building%20the%20first%20UX%20quality%20baseline%20for%20a%20hard-to-reach%20B2B%20persona&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Building%20the%20first%20UX%20quality%20baseline%20for%20a%20hard-to-reach%20B2B%20persona.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #0E7C86; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="WFO UXQ">Request the full case study →</a>
+            <a href="mailto:abhishek.jain520@gmail.com?subject=Case%20study%20request%3A%20Building%20the%20first%20UX%20quality%20baseline%20for%20a%20hard-to-reach%20B2B%20persona&amp;body=Hi%20Abhishek%2C%0A%0AI%27d%20like%20to%20view%20the%20full%20case%20study%20for%20Building%20the%20first%20UX%20quality%20baseline%20for%20a%20hard-to-reach%20B2B%20persona.%0A%0AName%3A%0ACompany%20%2F%20role%3A%0A%0AThanks" style="display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #0E7C86; border: 1px solid transparent; border-radius: 2px; padding: 8px 14px; margin-left: -15px; transition: border-color 0.15s ease, background 0.15s ease" style-hover="{{ {borderColor:'#0E7C86', background:'#FAFAF8'} }}" data-umami-event="request-case-study" data-umami-event-project="WFO UXQ" data-case-label="04. Workforce Optimization (WFO) — UXQ Improvement">Request the full case study →</a>
             <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F;">Shared on request — contains confidential work.</div>
           </div>
           <div class="case-metrics" style="{{ caseMetricsStyle }}">
@@ -317,12 +323,21 @@
           <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; color:#54585F; margin-top:10px;">"Build with Precision" — EE Summit 2024, Meta London. UX research studies with Ray-Ban Meta Glasses across data center field visits, in-office experience capture, and warehouse fieldwork.</div>
         </div>
         <div style="display:flex; flex-direction:column;">
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">Podcast guest — "A Conversation About Design," ep. 013 ( Spotify, Apply Podcasts)</div></div>
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2024</div><div style="font-size:14.5px;">"Build with Precision" — EE Summit, Meta London</div></div>
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2022</div><div style="font-size:14.5px;">ProductCamp Poland</div></div>
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2021</div><div style="font-size:14.5px;">ProductWorld — 8,000+ attendees (Virtual)</div></div>
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2019</div><div style="font-size:14.5px;">CTI Automotive Munich</div></div>
-          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2016</div><div style="font-size:14.5px;">HCI International&nbsp; London</div></div>
+          <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+            <symbol id="icon-uk" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><clipPath id="icon-uk-clip"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#icon-uk-clip)" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></symbol>
+            <symbol id="icon-pl" viewBox="0 0 8 5" preserveAspectRatio="none"><rect width="8" height="5" fill="#fff"/><rect y="2.5" width="8" height="2.5" fill="#DC143C"/></symbol>
+            <symbol id="icon-de" viewBox="0 0 5 3" preserveAspectRatio="none"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></symbol>
+            <symbol id="icon-apple-podcasts" viewBox="0 0 24 24"><defs><linearGradient id="icon-apple-podcasts-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F452FF"/><stop offset="1" stop-color="#832BC1"/></linearGradient></defs><rect width="24" height="24" rx="5.5" fill="url(#icon-apple-podcasts-bg)"/><path d="M8.1 13.9A5.5 5.5 0 1 1 15.9 13.9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="10" r="2.1" fill="#fff"/><rect x="10.9" y="13" width="2.2" height="6.5" rx="1.1" fill="#fff"/></symbol>
+            <symbol id="icon-spotify" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#1DB954"/><path d="M6.3 9.3C10 8.1 14.6 8.5 17.9 10.4" fill="none" stroke="#000" stroke-width="1.9" stroke-linecap="round"/><path d="M6.9 12.5C10 11.6 13.6 11.9 16.5 13.5" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round"/><path d="M7.4 15.5C10 14.8 12.8 15.1 15 16.3" fill="none" stroke="#000" stroke-width="1.3" stroke-linecap="round"/></symbol>
+          </svg>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2026</div><div style="font-size:14.5px;"><a class="talk-link" href="https://www.ddxconference.com/london" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="DDX London 2026">DDX London panel, &ldquo;Design Beyond AI&rdquo;, London, UK</a> <svg class="inline-icon" role="img" aria-label="United Kingdom"><use href="#icon-uk"/></svg></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">A Conversation About Design, podcast ep. 013 (<svg class="inline-icon" aria-hidden="true"><use href="#icon-apple-podcasts"/></svg> <a class="talk-link" href="https://podcasts.apple.com/in/podcast/episode-013-why-ux-communities-matter-with-abhishek-jain/id1805339123?i=1000702845011" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="Podcast Apple">Apple Podcasts</a>, <svg class="inline-icon" aria-hidden="true"><use href="#icon-spotify"/></svg> Spotify)</div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2024</div><div style="font-size:14.5px;"><a class="talk-link" href="https://lnkd.in/p/eeiSSJue" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="EE Summit 2024">Enterprise Engineering Summit, Meta, London, UK</a> <svg class="inline-icon" role="img" aria-label="United Kingdom"><use href="#icon-uk"/></svg></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2023</div><div style="font-size:14.5px;"><a class="talk-link" href="https://lnkd.in/p/ebHnZVVi" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="World of UX 2023">World of UX with the Youngest Minds, London, UK</a> <svg class="inline-icon" role="img" aria-label="United Kingdom"><use href="#icon-uk"/></svg></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2022</div><div style="font-size:14.5px;"><a class="talk-link" href="https://productcamp.pl/presentation/abhishek-jain/" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="ProductCamp 2022">ProductCamp, Poland</a> <svg class="inline-icon" role="img" aria-label="Poland"><use href="#icon-pl"/></svg></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2021</div><div style="font-size:14.5px;"><a class="talk-link" href="https://lnkd.in/p/eMkFiXpX" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="ProductWorld 2021">ProductWorld at DeveloperWeek (Virtual)</a></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2019</div><div style="font-size:14.5px;"><a class="talk-link" href="https://lnkd.in/p/effA4S6m" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="CTI Automotive 2019">CTI Automotive Diagnostics, Munich, Germany</a> <svg class="inline-icon" role="img" aria-label="Germany"><use href="#icon-de"/></svg></div></div>
+          <div class="row-2col-fixed" style="display:grid; grid-template-columns:110px 1fr; gap:24px; padding:16px 0; border-top:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2016</div><div style="font-size:14.5px;"><a class="talk-link" href="https://lnkd.in/p/e3cjJfqk" target="_blank" rel="noopener" data-umami-event="speaking-link-click" data-umami-event-item="HCI International 2016">International HCI, London, UK</a> <svg class="inline-icon" role="img" aria-label="United Kingdom"><use href="#icon-uk"/></svg></div></div>
         </div>
       </div>
     </div>
@@ -361,6 +376,21 @@
         <div class="row-3col-fixed" style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2025</div><div style="font-size:14.5px;">AR/AI recognition for logistics receiving — Summer Hackathon</div><div style="font-size:13px; color:#54585F; text-align:right;">Hackathon win + C-suite demo</div></div>
         <div class="row-3col-fixed" style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2024</div><div style="font-size:14.5px;">Ray-Ban Meta as a microphone for content creation — Summer Hackathon</div><div style="font-size:13px; color:#54585F; text-align:right;">Mic Drop Award</div></div>
         <div class="row-3col-fixed" style="display:grid; grid-template-columns:120px 1fr 200px; gap:24px; padding:16px 0; border-bottom:1px solid #DEDED6; align-items:baseline;"><div style="font-family:'IBM Plex Mono', monospace; font-size:13px; color:#0E7C86;">2016–21</div><div style="font-size:14.5px;">8 peer-reviewed papers at HCII and related conferences</div><div style="font-size:13px; color:#54585F; text-align:right;">→ Full list</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mentorship" style="padding:80px 0;">
+    <div class="container" style="max-width:1080px; margin:0 auto; padding:0 32px;">
+      <div style="max-width:620px; margin-bottom:44px;">
+        <div style="font-size:13px; color:#0E7C86; font-family:'IBM Plex Mono', monospace;">MENTORSHIP</div>
+        <h2 style="font-family:'Newsreader', serif; font-weight:500; font-size:clamp(24px,4.2vw,30px); margin-top:10px;">Book a session with me on ADPList</h2>
+      </div>
+      <div class="split-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center;">
+        <div>
+          <img src="images/mentorship_abhi.png" alt="Abhishek Jain, mentoring on adplist.org" style="width:100%; height:auto; border:1px solid #DEDED6; display:block;">
+        </div>
+        <section style="height:496px; box-shadow:rgba(142, 151, 158, 0.15) 0px 4px 19px 0px; border-radius:16px; overflow:hidden; width:100%; max-width:650px;"><iframe src="https://adplist.org/widgets/booking?src=abhishek-jain-mvxnig80" title="Book a mentorship session with Abhishek Jain on ADPList" width="100%" height="100%" loading="lazy" style="border:0px;"></iframe></section>
       </div>
     </div>
   </section>
@@ -423,6 +453,7 @@ class Component extends DCLogic {
     const scrollToAbout = scrollTo('about');
     const scrollToSpeaking = scrollTo('speaking');
     const scrollToPodcasts = scrollTo('podcasts');
+    const scrollToMentorship = scrollTo('mentorship');
     const scrollToPublications = scrollTo('publications');
     const scrollToContact = () => { window.location.href = 'mailto:abhishek.jain520@gmail.com'; };
 
@@ -443,10 +474,117 @@ class Component extends DCLogic {
       ? { display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '24px', alignItems: 'flex-start', borderLeft: 'none', borderTop: '1px solid #DEDED6', paddingTop: '20px', paddingLeft: 0 }
       : { display: 'flex', flexDirection: 'column', gap: '18px', justifyContent: 'center', borderLeft: '1px solid #DEDED6', paddingLeft: '32px' };
 
-    return { scrollToTop, scrollToWork, scrollToAbout, scrollToSpeaking, scrollToPodcasts, scrollToPublications, scrollToContact, ctaStyle, ctaHoverStyle, caseMetricsStyle, showStickyCta };
+    return { scrollToTop, scrollToWork, scrollToAbout, scrollToSpeaking, scrollToPodcasts, scrollToMentorship, scrollToPublications, scrollToContact, ctaStyle, ctaHoverStyle, caseMetricsStyle, showStickyCta };
   }
 }
 
+</script>
+<style>
+  .cs-req-backdrop{position:fixed; inset:0; background:rgba(21,23,27,0.45); display:flex; align-items:center; justify-content:center; padding:16px; z-index:1000;}
+  .cs-req-dialog{background:#FAFAF8; border:1px solid #DEDED6; width:100%; max-width:420px; padding:28px; font-family:'IBM Plex Sans', sans-serif; color:#15171B; position:relative;}
+  .cs-req-label{font-family:'IBM Plex Mono', monospace; font-size:12px; color:#0E7C86;}
+  .cs-req-title{font-family:'Newsreader', serif; font-weight:500; font-size:22px; margin:8px 0 0;}
+  .cs-req-case{font-size:14.5px; font-weight:500; color:#15171B; margin:8px 0 18px; padding-left:12px; border-left:2px solid #0E7C86;}
+  .cs-req-options{display:flex; flex-direction:column; gap:8px;}
+  .cs-req-options a, .cs-req-copy{display:flex; justify-content:space-between; align-items:center; font-family:'IBM Plex Mono', monospace; font-size:13px; color:#15171B; background:#fff; border:1px solid #DEDED6; padding:11px 14px; cursor:pointer; transition:border-color 0.15s ease;}
+  .cs-req-options a:hover, .cs-req-copy:hover{border-color:#0E7C86;}
+  .cs-req-email{margin-top:18px; padding-top:16px; border-top:1px solid #DEDED6; font-size:13px; color:#54585F;}
+  .cs-req-copy{width:100%; margin-top:8px; text-align:left;}
+  .cs-req-close{position:absolute; top:12px; right:14px; background:none; border:0; font-size:22px; line-height:1; color:#54585F; cursor:pointer;}
+</style>
+<script>
+(function () {
+  // "Request the full case study" links: offer Gmail / Outlook / default app / copy,
+  // since a bare mailto: does nothing for visitors without a desktop mail client.
+  var SELECTOR = 'a[data-umami-event="request-case-study"]';
+
+  function track(name, data) {
+    if (window.umami && typeof window.umami.track === 'function') window.umami.track(name, data);
+  }
+
+  function parseMailto(href) {
+    var url = new URL(href);
+    return {
+      to: decodeURIComponent(url.pathname),
+      subject: url.searchParams.get('subject') || '',
+      body: url.searchParams.get('body') || ''
+    };
+  }
+
+  function open(link) {
+    var mail = parseMailto(link.href);
+    var project = link.getAttribute('data-umami-event-project') || '';
+    var q = encodeURIComponent;
+    var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + q(mail.to) + '&su=' + q(mail.subject) + '&body=' + q(mail.body);
+    var outlook = 'https://outlook.live.com/mail/0/deeplink/compose?to=' + q(mail.to) + '&subject=' + q(mail.subject) + '&body=' + q(mail.body);
+
+    var backdrop = document.createElement('div');
+    backdrop.className = 'cs-req-backdrop';
+    backdrop.innerHTML =
+      '<div class="cs-req-dialog" role="dialog" aria-modal="true" aria-labelledby="cs-req-title">' +
+        '<button type="button" class="cs-req-close" aria-label="Close">&times;</button>' +
+        '<div class="cs-req-label">REQUEST CASE STUDY</div>' +
+        '<div class="cs-req-title" id="cs-req-title">How would you like to email me?</div>' +
+        '<div class="cs-req-case"></div>' +
+        '<div class="cs-req-options">' +
+          '<a data-option="gmail" target="_blank" rel="noopener">Open in Gmail <span>→</span></a>' +
+          '<a data-option="outlook" target="_blank" rel="noopener">Open in Outlook <span>→</span></a>' +
+          '<a data-option="default">Use my default email app <span>→</span></a>' +
+        '</div>' +
+        '<div class="cs-req-email">Or email me directly at <strong style="color:#15171B; font-weight:500;"></strong>' +
+          '<button type="button" class="cs-req-copy">Copy email address <span>⧉</span></button>' +
+        '</div>' +
+      '</div>';
+
+    backdrop.querySelector('[data-option="gmail"]').href = gmail;
+    backdrop.querySelector('[data-option="outlook"]').href = outlook;
+    backdrop.querySelector('[data-option="default"]').href = link.href;
+    backdrop.querySelector('.cs-req-email strong').textContent = mail.to;
+    backdrop.querySelector('.cs-req-case').textContent = link.getAttribute('data-case-label') || mail.subject;
+
+    function close() {
+      document.removeEventListener('keydown', onKey);
+      backdrop.remove();
+      link.focus();
+    }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+
+    backdrop.addEventListener('click', function (e) {
+      if (e.target === backdrop || e.target.closest('.cs-req-close')) return close();
+      var option = e.target.closest('[data-option]');
+      if (option) {
+        track('request-case-study-option', { project: project, option: option.getAttribute('data-option') });
+        setTimeout(close, 0);
+      }
+    });
+
+    var copyBtn = backdrop.querySelector('.cs-req-copy');
+    copyBtn.addEventListener('click', function () {
+      var done = function () { copyBtn.firstChild.textContent = 'Copied! '; };
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(mail.to).then(done, function () { window.prompt('Copy this email address:', mail.to); });
+      } else {
+        window.prompt('Copy this email address:', mail.to);
+      }
+      track('request-case-study-option', { project: project, option: 'copy' });
+    });
+
+    document.addEventListener('keydown', onKey);
+    document.body.appendChild(backdrop);
+    backdrop.querySelector('[data-option="gmail"]').focus();
+  }
+
+  // Capture on window so this runs before Umami's own click handler (which would follow the mailto:);
+  // the click is tracked here instead.
+  window.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest(SELECTOR);
+    if (!link || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    e.stopPropagation();
+    track('request-case-study', { project: link.getAttribute('data-umami-event-project') || '' });
+    open(link);
+  }, true);
+})();
 </script>
 </body>
 </html>
